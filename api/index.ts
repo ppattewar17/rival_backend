@@ -50,7 +50,7 @@ async function bootstrap() {
     return expressApp;
 }
 
-export default async (req: Request, res: Response) => {
+module.exports = async (req: Request, res: Response) => {
     const app = await bootstrap();
-    app(req, res);
+    return app(req, res);
 };
