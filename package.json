@@ -5,6 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "nest build",
+    "vercel-build": "prisma generate && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -35,16 +36,19 @@
     "bcryptjs": "^3.0.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3",
+    "express": "^5.2.1",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "pg": "^8.18.0",
-    "prisma": "^7.4.1"
+    "prisma": "^7.4.1",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.16",
     "@nestjs/testing": "^11.1.14",
     "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.6",
     "@types/node": "^25.3.0",
     "@types/passport-jwt": "^4.0.1",
     "@types/passport-local": "^1.0.38",
