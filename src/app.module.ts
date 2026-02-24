@@ -6,6 +6,7 @@ import { BlogsModule } from './blogs/blogs.module';
 import { CommentsModule } from './comments/comments.module';
 import { LikesModule } from './likes/likes.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -19,5 +20,6 @@ import { PrismaModule } from './prisma/prisma.module';
     CommentsModule,
     LikesModule,
   ],
+  controllers: [AppController],
 })
-export class AppModule {}
+export class AppModule { }
